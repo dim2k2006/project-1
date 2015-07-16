@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="Description" content="">
+		<meta name="Keywords" content="">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<!-- build:css css/vendor.css -->
+		<!-- bower:css -->
+		<link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
+		<!-- endbower -->
+		<!-- endbuild -->
+		<!-- build:css css/main.css -->
+		<link href="css/main.css" rel="stylesheet">
+		<!-- endbuild -->
+
+ 
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<!--[if IE 8]><html lang="ru-RU" class="ie8"><![endif]-->
+		<link rel="icon" type="image/png" href="images/favicon.png" />
+	</head>
+	<body>
+		<div class="chart">
+			<input class="chart__checkbox" type="checkbox" id="departure" name="flight" checked><!--
+			--><label class="chart__label chart__label_departure" for="departure"></label><!--
+			--><input class="chart__checkbox" type="checkbox" id="arrival" name="flight" checked><!--
+			--><label class="chart__label chart__label_arrival" for="arrival"></label>
+			
+			<div class="chart__content">
+				<table class="chart__table">
+					<tr class="chart__header">
+						<td class="chart__item chart__item_header">
+							<div class="fake-button"></div>
+						</td>
+						<td class="chart__item chart__item_header">
+							<div class="chart__container">№ рейса</div>
+						</td>
+						<td class="chart__item chart__item_header">
+							<div class="chart__container">Авиакомпания</div>
+						</td>
+						<td class="chart__item chart__item_header">
+							<div class="chart__container">Тип воздушного судна</div>
+						</td>
+						<td class="chart__item chart__item_header">
+							<div class="chart__container">Аэропорт назначения</div>
+						</td>
+						<td class="chart__item chart__item_header">
+							<div class="chart__container">Плановое время</div>
+						</td>
+						<td class="chart__item chart__item_header">
+							<div class="chart__container">Статус рейса</div>
+						</td>
+						<td class="chart__item chart__item_header">
+							<div class="chart__container">Примечание</div>
+						</td>
+					</tr>
+
+					<tr class="chart__row chart__departure">
+						<td class="chart__item">
+							<label for="popup1" class="popup__label popup__shower">
+								<div class="chart__container"><img src="images/departure.png"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup1" class="popup__label popup__shower">
+								<div class="chart__container">B2-993</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup1" class="popup__label popup__shower">
+								<div class="chart__container">Qantas <img class="chart__logo" src="images/qantas.png" alt="qantas"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup1" class="popup__label popup__shower">
+								<div class="chart__container">Boeing 737-800</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup1" class="popup__label popup__shower">
+								<div class="chart__container">London</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup1" class="popup__label popup__shower">
+								<div class="chart__container">20:38</div>
+							</label>
+						</td>
+						<td class="chart__item chart__item_status">
+							<label for="popup1" class="popup__label popup__shower">
+								<div class="chart__container">регистрация</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup1" class="popup__label popup__shower">
+								<div class="chart__container">ZZ9876</div>
+							</label>
+						</td>
+					</tr>
+
+					<tr class="chart__row chart__arrival">
+						<td class="chart__item">
+							<label for="popup2" class="popup__label popup__shower">
+								<div class="chart__container"><img src="images/arrival.png"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup2" class="popup__label popup__shower">
+								<div class="chart__container">B2-993</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup2" class="popup__label popup__shower">
+								<div class="chart__container">Jetstar Airways <img class="chart__logo" src="images/jetstar.png" alt="jetstar"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup2" class="popup__label popup__shower">
+								<div class="chart__container">Boeing 737-800</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup2" class="popup__label popup__shower">
+								<div class="chart__container">Singapore</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup2" class="popup__label popup__shower">
+								<div class="chart__container">20:38</div>
+							</label>
+						</td>
+						<td class="chart__item chart__item_status">
+							<label for="popup2" class="popup__label popup__shower">
+								<div class="chart__container">по расписанию</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup2" class="popup__label popup__shower">
+								<div class="chart__container">—</div>
+							</label>
+						</td>
+					</tr>
+
+					<tr class="chart__row chart__departure">
+						<td class="chart__item">
+							<label for="popup3" class="popup__label popup__shower">
+								<div class="chart__container"><img src="images/departure.png"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup3" class="popup__label popup__shower">
+								<div class="chart__container">B2-993</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup3" class="popup__label popup__shower">
+								<div class="chart__container">Lufthansa <img class="chart__logo" src="images/lufthansa.png" alt="lufthansa"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup3" class="popup__label popup__shower">
+								<div class="chart__container">Boeing 737-800</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup3" class="popup__label popup__shower">
+								<div class="chart__container">London</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup3" class="popup__label popup__shower">
+								<div class="chart__container">20:38</div>
+							</label>
+						</td>
+						<td class="chart__item chart__item_status">
+							<label for="popup3" class="popup__label popup__shower">
+								<div class="chart__container">ожидание посадки</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup3" class="popup__label popup__shower">
+								<div class="chart__container">—</div>
+							</label>
+						</td>
+					</tr>
+
+					<tr class="chart__row chart__arrival">
+						<td class="chart__item">
+							<label for="popup4" class="popup__label popup__shower">
+								<div class="chart__container"><img src="images/arrival.png"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup4" class="popup__label popup__shower">
+								<div class="chart__container">B2-993</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup4" class="popup__label popup__shower">
+								<div class="chart__container">Emirates Airline <img class="chart__logo" src="images/emirates.png" alt="emirates"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup4" class="popup__label popup__shower">
+								<div class="chart__container">Boeing 737-800</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup4" class="popup__label popup__shower">
+								<div class="chart__container">Dubai</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup4" class="popup__label popup__shower">
+								<div class="chart__container">20:38</div>
+							</label>
+						</td>
+						<td class="chart__item chart__item_status">
+							<label for="popup4" class="popup__label popup__shower">
+								<div class="chart__container">летит</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup4" class="popup__label popup__shower">
+								<div class="chart__container">ZZ9876</div>
+							</label>
+						</td>
+					</tr>
+
+					<tr class="chart__row chart__departure">
+						<td class="chart__item">
+							<label for="popup5" class="popup__label popup__shower">
+								<div class="chart__container"><img src="images/departure.png"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup5" class="popup__label popup__shower">
+								<div class="chart__container">B2-993</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup5" class="popup__label popup__shower">
+								<div class="chart__container">Qantas <img class="chart__logo" src="images/qantas.png" alt="qantas"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup5" class="popup__label popup__shower">
+								<div class="chart__container">Boeing 737-800</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup5" class="popup__label popup__shower">
+								<div class="chart__container">London</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup5" class="popup__label popup__shower">
+								<div class="chart__container">20:38</div>
+							</label>
+						</td>
+						<td class="chart__item chart__item_status">
+							<label for="popup5" class="popup__label popup__shower">
+								<div class="chart__container">посадка закончена</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup5" class="popup__label popup__shower">
+								<div class="chart__container">ZZ9876</div>
+							</label>
+						</td>
+					</tr>
+
+					<tr class="chart__row chart__arrival">
+						<td class="chart__item">
+							<label for="popup6" class="popup__label popup__shower">
+								<div class="chart__container"><img src="images/arrival.png"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup6" class="popup__label popup__shower">
+								<div class="chart__container">B2-993</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup6" class="popup__label popup__shower">
+								<div class="chart__container">Jetstar Airways <img class="chart__logo" src="images/jetstar.png" alt="jetstar"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup6" class="popup__label popup__shower">
+								<div class="chart__container">Boeing 737-800</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup6" class="popup__label popup__shower">
+								<div class="chart__container">Singapore</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup6" class="popup__label popup__shower">
+								<div class="chart__container">20:38</div>
+							</label>
+						</td>
+						<td class="chart__item chart__item_status">
+							<label for="popup6" class="popup__label popup__shower">
+								<div class="chart__container">приземлился</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup6" class="popup__label popup__shower">
+								<div class="chart__container">—</div>
+							</label>
+						</td>
+					</tr>
+
+					<tr class="chart__row chart__departure">
+						<td class="chart__item">
+							<label for="popup7" class="popup__label popup__shower">
+								<div class="chart__container"><img src="images/departure.png"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup7" class="popup__label popup__shower">
+								<div class="chart__container">B2-993</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup7" class="popup__label popup__shower">
+								<div class="chart__container">Lufthansa <img class="chart__logo" src="images/lufthansa.png" alt="lufthansa"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup7" class="popup__label popup__shower">
+								<div class="chart__container">Boeing 737-800</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup7" class="popup__label popup__shower">
+								<div class="chart__container">London</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup7" class="popup__label popup__shower">
+								<div class="chart__container">20:38</div>
+							</label>
+						</td>
+						<td class="chart__item chart__item_status">
+							<label for="popup7" class="popup__label popup__shower">
+								<div class="chart__container">вылетел</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup7" class="popup__label popup__shower">
+								<div class="chart__container">—</div>
+							</label>
+						</td>
+					</tr>
+
+					<tr class="chart__row chart__arrival">
+						<td class="chart__item">
+							<label for="popup8" class="popup__label popup__shower">
+								<div class="chart__container"><img src="images/arrival.png"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup8" class="popup__label popup__shower">
+								<div class="chart__container">B2-993</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup8" class="popup__label popup__shower">
+								<div class="chart__container">Emirates Airline <img class="chart__logo" src="images/emirates.png" alt="emirates"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup8" class="popup__label popup__shower">
+								<div class="chart__container">Boeing 737-800</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup8" class="popup__label popup__shower">
+								<div class="chart__container">Dubai</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup8" class="popup__label popup__shower">
+								<div class="chart__container">20:38</div>
+							</label>
+						</td>
+						<td class="chart__item chart__item_status">
+							<label for="popup8" class="popup__label popup__shower">
+								<div class="chart__container">задерживается до 21:53</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup8" class="popup__label popup__shower">
+								<div class="chart__container">ZZ9876</div>
+							</label>
+						</td>
+					</tr>
+
+					<tr class="chart__row chart__departure">
+						<td class="chart__item">
+							<label for="popup9" class="popup__label popup__shower">
+								<div class="chart__container"><img src="images/departure.png"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup9" class="popup__label popup__shower">
+								<div class="chart__container">B2-993</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup9" class="popup__label popup__shower">
+								<div class="chart__container">Lufthansa <img class="chart__logo" src="images/lufthansa.png" alt="lufthansa"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup9" class="popup__label popup__shower">
+								<div class="chart__container">Boeing 737-800</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup9" class="popup__label popup__shower">
+								<div class="chart__container">London</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup9" class="popup__label popup__shower">
+								<div class="chart__container">20:38</div>
+							</label>
+						</td>
+						<td class="chart__item chart__item_status">
+							<label for="popup9" class="popup__label popup__shower">
+								<div class="chart__container">отменен</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup9" class="popup__label popup__shower">
+								<div class="chart__container">—</div>
+							</label>
+						</td>
+					</tr>
+
+					<tr class="chart__row chart__arrival">
+						<td class="chart__item">
+							<label for="popup10" class="popup__label popup__shower">
+								<div class="chart__container"><img src="images/arrival.png"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup10" class="popup__label popup__shower">
+								<div class="chart__container">B2-993</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup10" class="popup__label popup__shower">
+								<div class="chart__container">Jetstar Airways <img class="chart__logo" src="images/jetstar.png" alt="jetstar"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup10" class="popup__label popup__shower">
+								<div class="chart__container">Boeing 737-800</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup10" class="popup__label popup__shower">
+								<div class="chart__container">Singapore</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup10" class="popup__label popup__shower">
+								<div class="chart__container">20:38</div>
+							</label>
+						</td>
+						<td class="chart__item chart__item_status">
+							<label for="popup10" class="popup__label popup__shower">
+								<div class="chart__container">приземлился</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup10" class="popup__label popup__shower">
+								<div class="chart__container">—</div>
+							</label>
+						</td>
+					</tr>
+
+					<tr class="chart__row chart__departure">
+						<td class="chart__item">
+							<label for="popup11" class="popup__label popup__shower">
+								<div class="chart__container"><img src="images/departure.png"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup11" class="popup__label popup__shower">
+								<div class="chart__container">B2-993</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup11" class="popup__label popup__shower">
+								<div class="chart__container">Lufthansa <img class="chart__logo" src="images/lufthansa.png" alt="lufthansa"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup11" class="popup__label popup__shower">
+								<div class="chart__container">Boeing 737-800</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup11" class="popup__label popup__shower">
+								<div class="chart__container">London</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup11" class="popup__label popup__shower">
+								<div class="chart__container">0:38</div>
+							</label>
+						</td>
+						<td class="chart__item chart__item_status">
+							<label for="popup11" class="popup__label popup__shower">
+								<div class="chart__container">вылетел</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup11" class="popup__label popup__shower">
+								<div class="chart__container">—</div>
+							</label>
+						</td>
+					</tr>
+
+					<tr class="chart__row chart__arrival">
+						<td class="chart__item">
+							<label for="popup12" class="popup__label popup__shower">
+								<div class="chart__container"><img src="images/arrival.png"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup12" class="popup__label popup__shower">
+								<div class="chart__container">B2-993</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup12" class="popup__label popup__shower">
+								<div class="chart__container">Emirates Airline <img class="chart__logo" src="images/emirates.png" alt="emirates"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup12" class="popup__label popup__shower">
+								<div class="chart__container">Boeing 737-800</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup12" class="popup__label popup__shower">
+								<div class="chart__container">Dubai</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup12" class="popup__label popup__shower">
+								<div class="chart__container">20:38</div>
+							</label>
+						</td>
+						<td class="chart__item chart__item_status">
+							<label for="popup12" class="popup__label popup__shower">
+								<div class="chart__container">летит</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup12" class="popup__label popup__shower">
+								<div class="chart__container">ZZ9876</div>
+							</label>
+						</td>
+					</tr>
+
+					<tr class="chart__row chart__departure">
+						<td class="chart__item">
+							<label for="popup13" class="popup__label popup__shower">
+								<div class="chart__container"><img src="images/departure.png"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup13" class="popup__label popup__shower">
+								<div class="chart__container">B2-993</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup13" class="popup__label popup__shower">
+								<div class="chart__container">Lufthansa <img class="chart__logo" src="images/lufthansa.png" alt="lufthansa"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup13" class="popup__label popup__shower">
+								<div class="chart__container">Boeing 737-800</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup13" class="popup__label popup__shower">
+								<div class="chart__container">London</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup13" class="popup__label popup__shower">
+								<div class="chart__container">20:38</div>
+							</label>
+						</td>
+						<td class="chart__item chart__item_status">
+							<label for="popup13" class="popup__label popup__shower">
+								<div class="chart__container">отменен</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup13" class="popup__label popup__shower">
+								<div class="chart__container">—</div>
+							</label>
+						</td>
+					</tr>
+
+					<tr class="chart__row chart__arrival">
+						<td class="chart__item">
+							<label for="popup14" class="popup__label popup__shower">
+								<div class="chart__container"><img src="images/arrival.png"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup14" class="popup__label popup__shower">
+								<div class="chart__container">B2-993</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup14" class="popup__label popup__shower">
+								<div class="chart__container">Jetstar Airways <img class="chart__logo" src="images/jetstar.png" alt="jetstar"></div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup14" class="popup__label popup__shower">
+								<div class="chart__container">Boeing 737-800</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup14" class="popup__label popup__shower">
+								<div class="chart__container">Singapore</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup14" class="popup__label popup__shower">
+								<div class="chart__container">20:38</div>
+							</label>
+						</td>
+						<td class="chart__item chart__item_status">
+							<label for="popup14" class="popup__label popup__shower">
+								<div class="chart__container">приземлился</div>
+							</label>
+						</td>
+						<td class="chart__item">
+							<label for="popup14" class="popup__label popup__shower">
+								<div class="chart__container">—</div>
+							</label>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+
+
+		<div class="popup-wrapper">
+			<input type="checkbox" class="popup__checkbox" id="popup1">
+			<div class="popup">
+				<div class="popup__content">
+					<label for="popup1" class="popup__closer"></label>
+					<div class="popup__logo">
+						<div class="popup__title">Qantas Airways Limited</div>
+						<img class="popup__img" src="images/qantas-big.png" alt="Qantas Airways Limited">
+					</div>
+					<div class="popup__info">
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">№ рейса</div>
+								<div class="popup__data">B2-993</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Тип воздушного судна</div>
+								<div class="popup__data">Boeing 737-800</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Аэропорт назначения</div>
+								<div class="popup__data">London</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Плановое время</div>
+								<div class="popup__data popup__data_time">20:38</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Статус рейса</div>
+								<div class="popup__data popup__data_status">регистрация</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="popup-wrapper">
+			<input type="checkbox" class="popup__checkbox" id="popup2">
+			<div class="popup">
+				<div class="popup__content">
+					<label for="popup2" class="popup__closer"></label>
+					<div class="popup__logo">
+						<div class="popup__title">Jetstar Airways</div>
+						<img class="popup__img" src="images/jetstar-big.png" alt="Jetstar Airways">
+					</div>
+					<div class="popup__info">
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">№ рейса</div>
+								<div class="popup__data">B2-993</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Тип воздушного судна</div>
+								<div class="popup__data">Boeing 737-800</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Аэропорт назначения</div>
+								<div class="popup__data">Singapore</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Плановое время</div>
+								<div class="popup__data popup__data_time">20:38</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Статус рейса</div>
+								<div class="popup__data popup__data_status">ПО РАСПИСАНИЮ</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="popup-wrapper">
+			<input type="checkbox" class="popup__checkbox" id="popup3">
+			<div class="popup">
+				<div class="popup__content">
+					<label for="popup3" class="popup__closer"></label>
+					<div class="popup__logo">
+						<div class="popup__title">Lufthansa</div>
+						<img class="popup__img" src="images/lufthansa-big.png" alt="Lufthansa">
+					</div>
+					<div class="popup__info">
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">№ рейса</div>
+								<div class="popup__data">B2-993</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Тип воздушного судна</div>
+								<div class="popup__data">Boeing 737-800</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Аэропорт назначения</div>
+								<div class="popup__data">London</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Плановое время</div>
+								<div class="popup__data popup__data_time">20:38</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Статус рейса</div>
+								<div class="popup__data popup__data_status">ОЖИДАНИЕ ПОСАДКИ</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="popup-wrapper">
+			<input type="checkbox" class="popup__checkbox" id="popup4">
+			<div class="popup">
+				<div class="popup__content">
+					<label for="popup4" class="popup__closer"></label>
+					<div class="popup__logo">
+						<div class="popup__title">Emirates Airline</div>
+						<img class="popup__img" src="images/emirates-big.png" alt="Emirates Airline">
+					</div>
+					<div class="popup__info">
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">№ рейса</div>
+								<div class="popup__data">B2-993</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Тип воздушного судна</div>
+								<div class="popup__data">Boeing 737-800</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Аэропорт назначения</div>
+								<div class="popup__data">Dubai</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Плановое время</div>
+								<div class="popup__data popup__data_time">20:38</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Статус рейса</div>
+								<div class="popup__data popup__data_status">ЛЕТИТ</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="popup-wrapper">
+			<input type="checkbox" class="popup__checkbox" id="popup5">
+			<div class="popup">
+				<div class="popup__content">
+					<label for="popup5" class="popup__closer"></label>
+					<div class="popup__logo">
+						<div class="popup__title">Qantas Airways Limited</div>
+						<img class="popup__img" src="images/qantas-big.png" alt="Qantas Airways Limited">
+					</div>
+					<div class="popup__info">
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">№ рейса</div>
+								<div class="popup__data">B2-993</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Тип воздушного судна</div>
+								<div class="popup__data">Boeing 737-800</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Аэропорт назначения</div>
+								<div class="popup__data">London</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Плановое время</div>
+								<div class="popup__data popup__data_time">20:38</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Статус рейса</div>
+								<div class="popup__data popup__data_status">регистрация</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="popup-wrapper">
+			<input type="checkbox" class="popup__checkbox" id="popup6">
+			<div class="popup">
+				<div class="popup__content">
+					<label for="popup6" class="popup__closer"></label>
+					<div class="popup__logo">
+						<div class="popup__title">Jetstar Airways</div>
+						<img class="popup__img" src="images/jetstar-big.png" alt="Jetstar Airways">
+					</div>
+					<div class="popup__info">
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">№ рейса</div>
+								<div class="popup__data">B2-993</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Тип воздушного судна</div>
+								<div class="popup__data">Boeing 737-800</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Аэропорт назначения</div>
+								<div class="popup__data">Singapore</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Плановое время</div>
+								<div class="popup__data popup__data_time">20:38</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Статус рейса</div>
+								<div class="popup__data popup__data_status">ПО РАСПИСАНИЮ</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="popup-wrapper">
+			<input type="checkbox" class="popup__checkbox" id="popup7">
+			<div class="popup">
+				<div class="popup__content">
+					<label for="popup7" class="popup__closer"></label>
+					<div class="popup__logo">
+						<div class="popup__title">Lufthansa</div>
+						<img class="popup__img" src="images/lufthansa-big.png" alt="Lufthansa">
+					</div>
+					<div class="popup__info">
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">№ рейса</div>
+								<div class="popup__data">B2-993</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Тип воздушного судна</div>
+								<div class="popup__data">Boeing 737-800</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Аэропорт назначения</div>
+								<div class="popup__data">London</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Плановое время</div>
+								<div class="popup__data popup__data_time">20:38</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Статус рейса</div>
+								<div class="popup__data popup__data_status">ОЖИДАНИЕ ПОСАДКИ</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="popup-wrapper">
+			<input type="checkbox" class="popup__checkbox" id="popup8">
+			<div class="popup">
+				<div class="popup__content">
+					<label for="popup8" class="popup__closer"></label>
+					<div class="popup__logo">
+						<div class="popup__title">Emirates Airline</div>
+						<img class="popup__img" src="images/emirates-big.png" alt="Emirates Airline">
+					</div>
+					<div class="popup__info">
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">№ рейса</div>
+								<div class="popup__data">B2-993</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Тип воздушного судна</div>
+								<div class="popup__data">Boeing 737-800</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Аэропорт назначения</div>
+								<div class="popup__data">Dubai</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Плановое время</div>
+								<div class="popup__data popup__data_time">20:38</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Статус рейса</div>
+								<div class="popup__data popup__data_status">ЛЕТИТ</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="popup-wrapper">
+			<input type="checkbox" class="popup__checkbox" id="popup9">
+			<div class="popup">
+				<div class="popup__content">
+					<label for="popup9" class="popup__closer"></label>
+					<div class="popup__logo">
+						<div class="popup__title">Qantas Airways Limited</div>
+						<img class="popup__img" src="images/qantas-big.png" alt="Qantas Airways Limited">
+					</div>
+					<div class="popup__info">
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">№ рейса</div>
+								<div class="popup__data">B2-993</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Тип воздушного судна</div>
+								<div class="popup__data">Boeing 737-800</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Аэропорт назначения</div>
+								<div class="popup__data">London</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Плановое время</div>
+								<div class="popup__data popup__data_time">20:38</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Статус рейса</div>
+								<div class="popup__data popup__data_status">регистрация</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="popup-wrapper">
+			<input type="checkbox" class="popup__checkbox" id="popup10">
+			<div class="popup">
+				<div class="popup__content">
+					<label for="popup10" class="popup__closer"></label>
+					<div class="popup__logo">
+						<div class="popup__title">Jetstar Airways</div>
+						<img class="popup__img" src="images/jetstar-big.png" alt="Jetstar Airways">
+					</div>
+					<div class="popup__info">
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">№ рейса</div>
+								<div class="popup__data">B2-993</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Тип воздушного судна</div>
+								<div class="popup__data">Boeing 737-800</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Аэропорт назначения</div>
+								<div class="popup__data">Singapore</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Плановое время</div>
+								<div class="popup__data popup__data_time">20:38</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Статус рейса</div>
+								<div class="popup__data popup__data_status">ПО РАСПИСАНИЮ</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="popup-wrapper">
+			<input type="checkbox" class="popup__checkbox" id="popup11">
+			<div class="popup">
+				<div class="popup__content">
+					<label for="popup11" class="popup__closer"></label>
+					<div class="popup__logo">
+						<div class="popup__title">Lufthansa</div>
+						<img class="popup__img" src="images/lufthansa-big.png" alt="Lufthansa">
+					</div>
+					<div class="popup__info">
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">№ рейса</div>
+								<div class="popup__data">B2-993</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Тип воздушного судна</div>
+								<div class="popup__data">Boeing 737-800</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Аэропорт назначения</div>
+								<div class="popup__data">London</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Плановое время</div>
+								<div class="popup__data popup__data_time">20:38</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Статус рейса</div>
+								<div class="popup__data popup__data_status">ОЖИДАНИЕ ПОСАДКИ</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="popup-wrapper">
+			<input type="checkbox" class="popup__checkbox" id="popup12">
+			<div class="popup">
+				<div class="popup__content">
+					<label for="popup12" class="popup__closer"></label>
+					<div class="popup__logo">
+						<div class="popup__title">Emirates Airline</div>
+						<img class="popup__img" src="images/emirates-big.png" alt="Emirates Airline">
+					</div>
+					<div class="popup__info">
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">№ рейса</div>
+								<div class="popup__data">B2-993</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Тип воздушного судна</div>
+								<div class="popup__data">Boeing 737-800</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Аэропорт назначения</div>
+								<div class="popup__data">Dubai</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Плановое время</div>
+								<div class="popup__data popup__data_time">20:38</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Статус рейса</div>
+								<div class="popup__data popup__data_status">ЛЕТИТ</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="popup-wrapper">
+			<input type="checkbox" class="popup__checkbox" id="popup13">
+			<div class="popup">
+				<div class="popup__content">
+					<label for="popup13" class="popup__closer"></label>
+					<div class="popup__logo">
+						<div class="popup__title">Lufthansa</div>
+						<img class="popup__img" src="images/lufthansa-big.png" alt="Lufthansa">
+					</div>
+					<div class="popup__info">
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">№ рейса</div>
+								<div class="popup__data">B2-993</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Тип воздушного судна</div>
+								<div class="popup__data">Boeing 737-800</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Аэропорт назначения</div>
+								<div class="popup__data">London</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Плановое время</div>
+								<div class="popup__data popup__data_time">20:38</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Статус рейса</div>
+								<div class="popup__data popup__data_status">ОЖИДАНИЕ ПОСАДКИ</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="popup-wrapper">
+			<input type="checkbox" class="popup__checkbox" id="popup14">
+			<div class="popup">
+				<div class="popup__content">
+					<label for="popup14" class="popup__closer"></label>
+					<div class="popup__logo">
+						<div class="popup__title">Jetstar Airways</div>
+						<img class="popup__img" src="images/jetstar-big.png" alt="Jetstar Airways">
+					</div>
+					<div class="popup__info">
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">№ рейса</div>
+								<div class="popup__data">B2-993</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Тип воздушного судна</div>
+								<div class="popup__data">Boeing 737-800</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Аэропорт назначения</div>
+								<div class="popup__data">Singapore</div>
+							</div>
+						</div>
+						<div class="popup__row">
+							<div class="popup__cell popup__cell_left">
+								<div class="popup__name">Плановое время</div>
+								<div class="popup__data popup__data_time">20:38</div>
+							</div><!--
+							--><div class="popup__cell popup__cell_right">
+								<div class="popup__name">Статус рейса</div>
+								<div class="popup__data popup__data_status">ПО РАСПИСАНИЮ</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+
+		
+		<!-- build:js scripts/vendor.js -->
+    	<!-- bower:js -->
+    	<script src="bower_components/jquery/jquery.js"></script>
+    	<!-- endbower -->
+    	<!--<script src="js/modal.js"></script>-->
+    	<!-- endbuild -->
+		<!-- build:js scripts/main.js -->
+		<!--<script src="js/main.js"></script>
+		<script src="js/validation.js"></script>-->
+		<!-- endbuild -->
+	</body>
+</html>
