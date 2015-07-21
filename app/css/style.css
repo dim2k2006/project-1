@@ -17,8 +17,9 @@ html {
 /*BODY*/
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	background-color: #F5F9FC;
 	background-repeat: no-repeat;
-	background-position: 50% 50%;
+	background-position: 50% 0;
 	background-image: url(../images/bg.jpg);
 	/*background-attachment: fixed;*/
 }
@@ -56,11 +57,44 @@ h6 {
 
 
 
+/*HEADER*/
+.header {
+	position: relative;
+	max-width: 960px;
+	height: 100px;
+	margin: 0 auto;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-image: url(../images/bg.jpg);
+	z-index: 5;
+}
+
+
+
+/*TABLE HEADER*/
+.table-header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+
+.table-header__content {
+	position: relative;
+	max-width: 960px;
+	height: 80px;
+	margin: 0 auto;
+	background-color: blue;
+}
+
+
+
 /*CHART*/
 .chart {
 	position: relative;
 	max-width: 960px;
-	margin-top: 100px;
+	/*margin-top: 100px;*/
 	margin-bottom: 100px;
 	margin-left: auto;
 	margin-right: auto;
@@ -127,24 +161,17 @@ h6 {
 	cursor: pointer;
 }
 
-.chart__row:nth-child(even) {
-	background-color: #eff1f3;
-}
-
-.chart__row:hover {
-	background: rgba(141, 151, 178, .7);
-}
-
 .chart__row:hover .chart__item {
 	color: #FFF;
 }
 
 td, th {
 	position: relative;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
-td:hover::after,
-th:hover::after {
+td:hover::after {
 	content: "";
 	position: absolute;
 	background: rgba(141, 151, 178, .7);
@@ -152,6 +179,21 @@ th:hover::after {
 	top: -5000px;
 	height: 10000px;
 	width: 100%;
+	z-index: 1;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+td:hover::before {
+	content: "";
+	position: absolute;
+	background: rgba(141, 151, 178, .7);
+	left: -5000px;
+	top: 0;
+	height: 100%;
+	width: 10000px;
 	z-index: 1;
 	-webkit-transform: translateZ(0);
 	-ms-transform: translateZ(0);
@@ -175,6 +217,10 @@ th:hover::after {
 }
 
 .chart__arrival {
+	display: none;
+}
+
+.chart__aircraft_short {
 	display: none;
 }
 
@@ -213,6 +259,23 @@ th:hover::after {
 	background-position: -28px -27px;
 }
 
+.chart__label_departure_fix {
+	position: fixed;
+	top: 0;
+	z-index: 4;
+}
+
+.chart__label_arrival_fix {
+	position: fixed;
+	top: 0;
+	z-index: 4;
+}
+
+
+
+
+
+
 #departure:checked ~ div .chart__departure {
 	display: table-row;
 }
@@ -220,6 +283,44 @@ th:hover::after {
 #arrival:checked ~ div .chart__arrival {
 	display: table-row;
 }
+
+
+
+
+
+
+
+#arrival:checked ~ div .chart__arrival_sort {
+	background-color: #eff1f3;
+}
+
+#departure:checked ~ div .chart__departure_sort {
+	background-color: #eff1f3;
+}
+
+
+
+
+
+
+/*DEFAULT STATE*/
+#departure:checked ~ #arrival:checked ~ div .chart__arrival_sort {
+	background-color: transparent;
+}
+
+#departure:checked ~ #arrival:checked ~ div .chart__row:nth-child(even) {
+	background-color: #eff1f3;
+}
+
+
+
+
+
+
+/*#departure:checked ~ #arrival:checked ~ div .chart__row:hover {
+	background: rgba(141, 151, 178, .7);
+}*/
+
 
 
 
@@ -275,12 +376,15 @@ th:hover::after {
 .popup__content {
 	position: absolute;
 	width: 320px;
-	height: 340px;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
+	/*height: 340px;*/
+	top: 50%;
+	left: 50%;
+	/*margin: auto;*/
+	margin-left: -160px;
+	-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		 -o-transform: translateY(-50%);
+			transform: translateY(-50%);
 	background-color: #fff;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;

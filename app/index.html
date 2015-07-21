@@ -26,43 +26,84 @@
 		<link rel="icon" type="image/png" href="images/favicon.png" />
 	</head>
 	<body>
+		<div class="header"></div>
+		
 		<div class="chart">
 			<input class="chart__checkbox" type="checkbox" id="departure" name="flight" checked><!--
 			--><label class="chart__label chart__label_departure" for="departure"></label><!--
+			--><label class="chart__label chart__label_departure chart__label_departure_fix" for="departure"></label><!--
 			--><input class="chart__checkbox" type="checkbox" id="arrival" name="flight" checked><!--
-			--><label class="chart__label chart__label_arrival" for="arrival"></label>
+			--><label class="chart__label chart__label_arrival" for="arrival"></label><!--
+			--><label class="chart__label chart__label_arrival chart__label_arrival_fix" for="arrival"></label>
+
+
+
+			<div class="table-header">
+				<div class="table-header__content">
+					<table class="chart__table">
+						<tr class="chart__header">
+							<th class="chart__item chart__item_header chart__type">
+								<div class="fake-button"></div>
+							</th>
+							<th class="chart__item chart__item_header">
+								<div class="chart__container">№ рейса</div>
+							</th>
+							<th class="chart__item chart__item_header chart__airline">
+								<div class="chart__container">Авиакомпания</div>
+							</th>
+							<th class="chart__item chart__item_header chart__aircraft">
+								<div class="chart__container">Тип воздушного судна</div>
+							</th>
+							<th class="chart__item chart__item_header chart__airport">
+								<div class="chart__container chart__airport">Аэропорт назначения</div>
+							</th>
+							<th class="chart__item chart__item_header">
+								<div class="chart__container">Плановое время</div>
+							</th>
+							<th class="chart__item chart__item_header">
+								<div class="chart__container">Статус рейса</div>
+							</th>
+							<th class="chart__item chart__item_header chart__note">
+								<div class="chart__container">Примечание</div>
+							</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+
 			
 			<div class="chart__content">
 				<table class="chart__table">
 					<tr class="chart__header">
-						<td class="chart__item chart__item_header">
+						<th class="chart__item chart__item_header chart__type">
 							<div class="fake-button"></div>
-						</td>
-						<td class="chart__item chart__item_header">
+						</th>
+						<th class="chart__item chart__item_header">
 							<div class="chart__container">№ рейса</div>
-						</td>
-						<td class="chart__item chart__item_header">
+						</th>
+						<th class="chart__item chart__item_header chart__airline">
 							<div class="chart__container">Авиакомпания</div>
-						</td>
-						<td class="chart__item chart__item_header">
+						</th>
+						<th class="chart__item chart__item_header chart__aircraft">
 							<div class="chart__container">Тип воздушного судна</div>
-						</td>
-						<td class="chart__item chart__item_header">
-							<div class="chart__container">Аэропорт назначения</div>
-						</td>
-						<td class="chart__item chart__item_header">
+						</th>
+						<th class="chart__item chart__item_header chart__airport">
+							<div class="chart__container chart__airport">Аэропорт назначения</div>
+						</th>
+						<th class="chart__item chart__item_header">
 							<div class="chart__container">Плановое время</div>
-						</td>
-						<td class="chart__item chart__item_header">
+						</th>
+						<th class="chart__item chart__item_header">
 							<div class="chart__container">Статус рейса</div>
-						</td>
-						<td class="chart__item chart__item_header">
+						</th>
+						<th class="chart__item chart__item_header chart__note">
 							<div class="chart__container">Примечание</div>
-						</td>
+						</th>
 					</tr>
 
-					<tr class="chart__row chart__departure">
-						<td class="chart__item">
+					<tr class="chart__row chart__departure chart__departure_sort">
+						<td class="chart__item chart__type">
 							<label for="popup1" class="popup__label popup__shower">
 								<div class="chart__container"><img src="images/departure.png"></div>
 							</label>
@@ -72,17 +113,20 @@
 								<div class="chart__container">B2-993</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airline">
 							<label for="popup1" class="popup__label popup__shower">
-								<div class="chart__container">Qantas <img class="chart__logo" src="images/qantas.png" alt="qantas"></div>
+								<div class="chart__container"><span class="chart__company">Qantas</span> <img class="chart__logo" src="images/qantas.png" alt="qantas"></div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__aircraft">
 							<label for="popup1" class="popup__label popup__shower">
-								<div class="chart__container">Boeing 737-800</div>
+								<div class="chart__container">
+									<div class="chart__aircraft_full">Boeing 737-800</div>
+									<div class="chart__aircraft_short">B737</div>
+								</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airport">
 							<label for="popup1" class="popup__label popup__shower">
 								<div class="chart__container">London</div>
 							</label>
@@ -97,15 +141,15 @@
 								<div class="chart__container">регистрация</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__note">
 							<label for="popup1" class="popup__label popup__shower">
 								<div class="chart__container">ZZ9876</div>
 							</label>
 						</td>
 					</tr>
 
-					<tr class="chart__row chart__arrival">
-						<td class="chart__item">
+					<tr class="chart__row chart__arrival chart__arrival_sort">
+						<td class="chart__item chart__type">
 							<label for="popup2" class="popup__label popup__shower">
 								<div class="chart__container"><img src="images/arrival.png"></div>
 							</label>
@@ -115,17 +159,20 @@
 								<div class="chart__container">B2-993</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airline">
 							<label for="popup2" class="popup__label popup__shower">
-								<div class="chart__container">Jetstar Airways <img class="chart__logo" src="images/jetstar.png" alt="jetstar"></div>
+								<div class="chart__container"><span class="chart__company">Jetstar Airways</span> <img class="chart__logo" src="images/jetstar.png" alt="jetstar"></div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__aircraft">
 							<label for="popup2" class="popup__label popup__shower">
-								<div class="chart__container">Boeing 737-800</div>
+								<div class="chart__container">
+									<div class="chart__aircraft_full">Boeing 737-800</div>
+									<div class="chart__aircraft_short">B737</div>
+								</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airport">
 							<label for="popup2" class="popup__label popup__shower">
 								<div class="chart__container">Singapore</div>
 							</label>
@@ -140,7 +187,7 @@
 								<div class="chart__container">по расписанию</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__note">
 							<label for="popup2" class="popup__label popup__shower">
 								<div class="chart__container">—</div>
 							</label>
@@ -148,7 +195,7 @@
 					</tr>
 
 					<tr class="chart__row chart__departure">
-						<td class="chart__item">
+						<td class="chart__item chart__type">
 							<label for="popup3" class="popup__label popup__shower">
 								<div class="chart__container"><img src="images/departure.png"></div>
 							</label>
@@ -158,17 +205,20 @@
 								<div class="chart__container">B2-993</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airline">
 							<label for="popup3" class="popup__label popup__shower">
-								<div class="chart__container">Lufthansa <img class="chart__logo" src="images/lufthansa.png" alt="lufthansa"></div>
+								<div class="chart__container"><span class="chart__company">Lufthansa</span> <img class="chart__logo" src="images/lufthansa.png" alt="lufthansa"></div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__aircraft">
 							<label for="popup3" class="popup__label popup__shower">
-								<div class="chart__container">Boeing 737-800</div>
+								<div class="chart__container">
+									<div class="chart__aircraft_full">Boeing 737-800</div>
+									<div class="chart__aircraft_short">B737</div>
+								</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airport">
 							<label for="popup3" class="popup__label popup__shower">
 								<div class="chart__container">London</div>
 							</label>
@@ -183,7 +233,7 @@
 								<div class="chart__container">ожидание посадки</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__note">
 							<label for="popup3" class="popup__label popup__shower">
 								<div class="chart__container">—</div>
 							</label>
@@ -191,7 +241,7 @@
 					</tr>
 
 					<tr class="chart__row chart__arrival">
-						<td class="chart__item">
+						<td class="chart__item chart__type">
 							<label for="popup4" class="popup__label popup__shower">
 								<div class="chart__container"><img src="images/arrival.png"></div>
 							</label>
@@ -201,17 +251,20 @@
 								<div class="chart__container">B2-993</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airline">
 							<label for="popup4" class="popup__label popup__shower">
-								<div class="chart__container">Emirates Airline <img class="chart__logo" src="images/emirates.png" alt="emirates"></div>
+								<div class="chart__container"><span class="chart__company">Emirates Airline</span> <img class="chart__logo" src="images/emirates.png" alt="emirates"></div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__aircraft">
 							<label for="popup4" class="popup__label popup__shower">
-								<div class="chart__container">Boeing 737-800</div>
+								<div class="chart__container">
+									<div class="chart__aircraft_full">Boeing 737-800</div>
+									<div class="chart__aircraft_short">B737</div>
+								</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airport">
 							<label for="popup4" class="popup__label popup__shower">
 								<div class="chart__container">Dubai</div>
 							</label>
@@ -226,15 +279,15 @@
 								<div class="chart__container">летит</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__note">
 							<label for="popup4" class="popup__label popup__shower">
 								<div class="chart__container">ZZ9876</div>
 							</label>
 						</td>
 					</tr>
 
-					<tr class="chart__row chart__departure">
-						<td class="chart__item">
+					<tr class="chart__row chart__departure chart__departure_sort">
+						<td class="chart__item chart__type">
 							<label for="popup5" class="popup__label popup__shower">
 								<div class="chart__container"><img src="images/departure.png"></div>
 							</label>
@@ -244,17 +297,20 @@
 								<div class="chart__container">B2-993</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airline">
 							<label for="popup5" class="popup__label popup__shower">
-								<div class="chart__container">Qantas <img class="chart__logo" src="images/qantas.png" alt="qantas"></div>
+								<div class="chart__container"><span class="chart__company">Qantas</span> <img class="chart__logo" src="images/qantas.png" alt="qantas"></div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__aircraft">
 							<label for="popup5" class="popup__label popup__shower">
-								<div class="chart__container">Boeing 737-800</div>
+								<div class="chart__container">
+									<div class="chart__aircraft_full">Boeing 737-800</div>
+									<div class="chart__aircraft_short">B737</div>
+								</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airport">
 							<label for="popup5" class="popup__label popup__shower">
 								<div class="chart__container">London</div>
 							</label>
@@ -269,15 +325,15 @@
 								<div class="chart__container">посадка закончена</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__note">
 							<label for="popup5" class="popup__label popup__shower">
 								<div class="chart__container">ZZ9876</div>
 							</label>
 						</td>
 					</tr>
 
-					<tr class="chart__row chart__arrival">
-						<td class="chart__item">
+					<tr class="chart__row chart__arrival chart__arrival_sort">
+						<td class="chart__item chart__type">
 							<label for="popup6" class="popup__label popup__shower">
 								<div class="chart__container"><img src="images/arrival.png"></div>
 							</label>
@@ -287,17 +343,20 @@
 								<div class="chart__container">B2-993</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airline">
 							<label for="popup6" class="popup__label popup__shower">
-								<div class="chart__container">Jetstar Airways <img class="chart__logo" src="images/jetstar.png" alt="jetstar"></div>
+								<div class="chart__container"><span class="chart__company">Jetstar Airways</span> <img class="chart__logo" src="images/jetstar.png" alt="jetstar"></div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__aircraft">
 							<label for="popup6" class="popup__label popup__shower">
-								<div class="chart__container">Boeing 737-800</div>
+								<div class="chart__container">
+									<div class="chart__aircraft_full">Boeing 737-800</div>
+									<div class="chart__aircraft_short">B737</div>
+								</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airport">
 							<label for="popup6" class="popup__label popup__shower">
 								<div class="chart__container">Singapore</div>
 							</label>
@@ -312,7 +371,7 @@
 								<div class="chart__container">приземлился</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__note">
 							<label for="popup6" class="popup__label popup__shower">
 								<div class="chart__container">—</div>
 							</label>
@@ -320,7 +379,7 @@
 					</tr>
 
 					<tr class="chart__row chart__departure">
-						<td class="chart__item">
+						<td class="chart__item chart__type">
 							<label for="popup7" class="popup__label popup__shower">
 								<div class="chart__container"><img src="images/departure.png"></div>
 							</label>
@@ -330,17 +389,20 @@
 								<div class="chart__container">B2-993</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airline">
 							<label for="popup7" class="popup__label popup__shower">
-								<div class="chart__container">Lufthansa <img class="chart__logo" src="images/lufthansa.png" alt="lufthansa"></div>
+								<div class="chart__container"><span class="chart__company">Lufthansa</span> <img class="chart__logo" src="images/lufthansa.png" alt="lufthansa"></div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__aircraft">
 							<label for="popup7" class="popup__label popup__shower">
-								<div class="chart__container">Boeing 737-800</div>
+								<div class="chart__container">
+									<div class="chart__aircraft_full">Boeing 737-800</div>
+									<div class="chart__aircraft_short">B737</div>
+								</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airport">
 							<label for="popup7" class="popup__label popup__shower">
 								<div class="chart__container">London</div>
 							</label>
@@ -355,7 +417,7 @@
 								<div class="chart__container">вылетел</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__note">
 							<label for="popup7" class="popup__label popup__shower">
 								<div class="chart__container">—</div>
 							</label>
@@ -363,7 +425,7 @@
 					</tr>
 
 					<tr class="chart__row chart__arrival">
-						<td class="chart__item">
+						<td class="chart__item chart__type">
 							<label for="popup8" class="popup__label popup__shower">
 								<div class="chart__container"><img src="images/arrival.png"></div>
 							</label>
@@ -373,17 +435,20 @@
 								<div class="chart__container">B2-993</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airline">
 							<label for="popup8" class="popup__label popup__shower">
-								<div class="chart__container">Emirates Airline <img class="chart__logo" src="images/emirates.png" alt="emirates"></div>
+								<div class="chart__container"><span class="chart__company">Emirates Airline</span> <img class="chart__logo" src="images/emirates.png" alt="emirates"></div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__aircraft">
 							<label for="popup8" class="popup__label popup__shower">
-								<div class="chart__container">Boeing 737-800</div>
+								<div class="chart__container">
+									<div class="chart__aircraft_full">Boeing 737-800</div>
+									<div class="chart__aircraft_short">B737</div>
+								</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airport">
 							<label for="popup8" class="popup__label popup__shower">
 								<div class="chart__container">Dubai</div>
 							</label>
@@ -398,15 +463,15 @@
 								<div class="chart__container">задерживается до 21:53</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__note">
 							<label for="popup8" class="popup__label popup__shower">
 								<div class="chart__container">ZZ9876</div>
 							</label>
 						</td>
 					</tr>
 
-					<tr class="chart__row chart__departure">
-						<td class="chart__item">
+					<tr class="chart__row chart__departure chart__departure_sort">
+						<td class="chart__item chart__type">
 							<label for="popup9" class="popup__label popup__shower">
 								<div class="chart__container"><img src="images/departure.png"></div>
 							</label>
@@ -416,17 +481,20 @@
 								<div class="chart__container">B2-993</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airline">
 							<label for="popup9" class="popup__label popup__shower">
-								<div class="chart__container">Lufthansa <img class="chart__logo" src="images/lufthansa.png" alt="lufthansa"></div>
+								<div class="chart__container"><span class="chart__company">Lufthansa</span> <img class="chart__logo" src="images/lufthansa.png" alt="lufthansa"></div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__aircraft">
 							<label for="popup9" class="popup__label popup__shower">
-								<div class="chart__container">Boeing 737-800</div>
+								<div class="chart__container">
+									<div class="chart__aircraft_full">Boeing 737-800</div>
+									<div class="chart__aircraft_short">B737</div>
+								</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airport">
 							<label for="popup9" class="popup__label popup__shower">
 								<div class="chart__container">London</div>
 							</label>
@@ -441,15 +509,15 @@
 								<div class="chart__container">отменен</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__note">
 							<label for="popup9" class="popup__label popup__shower">
 								<div class="chart__container">—</div>
 							</label>
 						</td>
 					</tr>
 
-					<tr class="chart__row chart__arrival">
-						<td class="chart__item">
+					<tr class="chart__row chart__arrival chart__arrival_sort">
+						<td class="chart__item chart__type">
 							<label for="popup10" class="popup__label popup__shower">
 								<div class="chart__container"><img src="images/arrival.png"></div>
 							</label>
@@ -459,17 +527,20 @@
 								<div class="chart__container">B2-993</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airline">
 							<label for="popup10" class="popup__label popup__shower">
-								<div class="chart__container">Jetstar Airways <img class="chart__logo" src="images/jetstar.png" alt="jetstar"></div>
+								<div class="chart__container"><span class="chart__company">Jetstar Airways</span> <img class="chart__logo" src="images/jetstar.png" alt="jetstar"></div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__aircraft">
 							<label for="popup10" class="popup__label popup__shower">
-								<div class="chart__container">Boeing 737-800</div>
+								<div class="chart__container">
+									<div class="chart__aircraft_full">Boeing 737-800</div>
+									<div class="chart__aircraft_short">B737</div>
+								</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airport">
 							<label for="popup10" class="popup__label popup__shower">
 								<div class="chart__container">Singapore</div>
 							</label>
@@ -484,7 +555,7 @@
 								<div class="chart__container">приземлился</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__note">
 							<label for="popup10" class="popup__label popup__shower">
 								<div class="chart__container">—</div>
 							</label>
@@ -492,7 +563,7 @@
 					</tr>
 
 					<tr class="chart__row chart__departure">
-						<td class="chart__item">
+						<td class="chart__item chart__type">
 							<label for="popup11" class="popup__label popup__shower">
 								<div class="chart__container"><img src="images/departure.png"></div>
 							</label>
@@ -502,17 +573,20 @@
 								<div class="chart__container">B2-993</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airline">
 							<label for="popup11" class="popup__label popup__shower">
-								<div class="chart__container">Lufthansa <img class="chart__logo" src="images/lufthansa.png" alt="lufthansa"></div>
+								<div class="chart__container"><span class="chart__company">Lufthansa</span> <img class="chart__logo" src="images/lufthansa.png" alt="lufthansa"></div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__aircraft">
 							<label for="popup11" class="popup__label popup__shower">
-								<div class="chart__container">Boeing 737-800</div>
+								<div class="chart__container">
+									<div class="chart__aircraft_full">Boeing 737-800</div>
+									<div class="chart__aircraft_short">B737</div>
+								</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airport">
 							<label for="popup11" class="popup__label popup__shower">
 								<div class="chart__container">London</div>
 							</label>
@@ -527,7 +601,7 @@
 								<div class="chart__container">вылетел</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__note">
 							<label for="popup11" class="popup__label popup__shower">
 								<div class="chart__container">—</div>
 							</label>
@@ -535,7 +609,7 @@
 					</tr>
 
 					<tr class="chart__row chart__arrival">
-						<td class="chart__item">
+						<td class="chart__item chart__type">
 							<label for="popup12" class="popup__label popup__shower">
 								<div class="chart__container"><img src="images/arrival.png"></div>
 							</label>
@@ -545,17 +619,20 @@
 								<div class="chart__container">B2-993</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airline">
 							<label for="popup12" class="popup__label popup__shower">
-								<div class="chart__container">Emirates Airline <img class="chart__logo" src="images/emirates.png" alt="emirates"></div>
+								<div class="chart__container"><span class="chart__company">Emirates Airline</span> <img class="chart__logo" src="images/emirates.png" alt="emirates"></div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__aircraft">
 							<label for="popup12" class="popup__label popup__shower">
-								<div class="chart__container">Boeing 737-800</div>
+								<div class="chart__container">
+									<div class="chart__aircraft_full">Boeing 737-800</div>
+									<div class="chart__aircraft_short">B737</div>
+								</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airport">
 							<label for="popup12" class="popup__label popup__shower">
 								<div class="chart__container">Dubai</div>
 							</label>
@@ -570,15 +647,15 @@
 								<div class="chart__container">летит</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__note">
 							<label for="popup12" class="popup__label popup__shower">
 								<div class="chart__container">ZZ9876</div>
 							</label>
 						</td>
 					</tr>
 
-					<tr class="chart__row chart__departure">
-						<td class="chart__item">
+					<tr class="chart__row chart__departure chart__departure_sort">
+						<td class="chart__item chart__type">
 							<label for="popup13" class="popup__label popup__shower">
 								<div class="chart__container"><img src="images/departure.png"></div>
 							</label>
@@ -588,17 +665,20 @@
 								<div class="chart__container">B2-993</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airline">
 							<label for="popup13" class="popup__label popup__shower">
-								<div class="chart__container">Lufthansa <img class="chart__logo" src="images/lufthansa.png" alt="lufthansa"></div>
+								<div class="chart__container"><span class="chart__company">Lufthansa</span> <img class="chart__logo" src="images/lufthansa.png" alt="lufthansa"></div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__aircraft">
 							<label for="popup13" class="popup__label popup__shower">
-								<div class="chart__container">Boeing 737-800</div>
+								<div class="chart__container">
+									<div class="chart__aircraft_full">Boeing 737-800</div>
+									<div class="chart__aircraft_short">B737</div>
+								</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airport">
 							<label for="popup13" class="popup__label popup__shower">
 								<div class="chart__container">London</div>
 							</label>
@@ -613,15 +693,15 @@
 								<div class="chart__container">отменен</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__note">
 							<label for="popup13" class="popup__label popup__shower">
 								<div class="chart__container">—</div>
 							</label>
 						</td>
 					</tr>
 
-					<tr class="chart__row chart__arrival">
-						<td class="chart__item">
+					<tr class="chart__row chart__arrival chart__arrival_sort">
+						<td class="chart__item chart__type">
 							<label for="popup14" class="popup__label popup__shower">
 								<div class="chart__container"><img src="images/arrival.png"></div>
 							</label>
@@ -631,17 +711,20 @@
 								<div class="chart__container">B2-993</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airline">
 							<label for="popup14" class="popup__label popup__shower">
-								<div class="chart__container">Jetstar Airways <img class="chart__logo" src="images/jetstar.png" alt="jetstar"></div>
+								<div class="chart__container"><span class="chart__company">Jetstar Airways</span> <img class="chart__logo" src="images/jetstar.png" alt="jetstar"></div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__aircraft">
 							<label for="popup14" class="popup__label popup__shower">
-								<div class="chart__container">Boeing 737-800</div>
+								<div class="chart__container">
+									<div class="chart__aircraft_full">Boeing 737-800</div>
+									<div class="chart__aircraft_short">B737</div>
+								</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__airport">
 							<label for="popup14" class="popup__label popup__shower">
 								<div class="chart__container">Singapore</div>
 							</label>
@@ -656,7 +739,7 @@
 								<div class="chart__container">приземлился</div>
 							</label>
 						</td>
-						<td class="chart__item">
+						<td class="chart__item chart__note">
 							<label for="popup14" class="popup__label popup__shower">
 								<div class="chart__container">—</div>
 							</label>
