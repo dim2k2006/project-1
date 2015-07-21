@@ -127,7 +127,25 @@
 		display: none;
 	}
 
-	
+	.chart__type {
+		width: 16.50%;
+	}
+
+	.chart__number {
+		width: 13.87%;
+	}
+
+	.chart__airline {
+		width: 24.88%;
+	}
+
+	.chart__time {
+		width: 17.94%;
+	}
+
+	.chart__status {
+		width: 26.79%;
+	}
 }
 
 
@@ -140,6 +158,22 @@
 	.chart__label {
 		display: none;
 	}
+
+	.chart__number {
+		width: 16.5%;
+	}
+
+	.chart__airline {
+		width: 29.75%;
+	}
+
+	.chart__time {
+		width: 21.25%;
+	}
+
+	.chart__status {
+		width: 32.5%;
+	}
 }
 
 
@@ -147,6 +181,18 @@
 @media screen and (max-width: 380px) {
 	.chart__airline {
 		display: none;
+	}
+
+	.chart__number {
+		width: 23.14%;
+	}
+
+	.chart__time {
+		width: 30.28%;
+	}
+
+	.chart__status {
+		width: 46.57%;
 	}
 }
 
