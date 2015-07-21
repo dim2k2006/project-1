@@ -21,7 +21,7 @@
 
 
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1000px) {
 	.chart {
 		margin-left: 15px;
 		margin-right: 15px;
@@ -54,18 +54,69 @@
 	.chart__note {
 		display: none;
 	}
+
+	.chart__type {
+		width: 8.80%;
+	}
+
+	.chart__number {
+		width: 7.45%;
+	}
+
+	.chart__airline {
+		width: 13.27%;
+	}
+
+	.chart__aircraft {
+		width: 18.29%;
+	}
+
+	.chart__airport {
+		width: 17.75%;
+	}
+
+	.chart__time {
+		width: 13.55%;
+	}
+
+	.chart__status {
+		width: 18.83%;
+	}
 }
 
 
 
 @media screen and (max-width: 600px) {
 	.chart {
-		margin-top: 15px;
 		margin-bottom: 15px;
 	}
 
 	.chart__aircraft {
 		display: none;
+	}
+
+	.chart__type {
+		width: 10.83%;
+	}
+
+	.chart__number {
+		width: 9.16%;
+	}
+
+	.chart__airline {
+		width: 16.33%;
+	}
+
+	.chart__airport {
+		width: 20.66%;
+	}
+
+	.chart__time {
+		width: 15.83%;
+	}
+
+	.chart__status {
+		width: 22.16%;
 	}
 }
 
@@ -75,6 +126,8 @@
 	.chart__airport {
 		display: none;
 	}
+
+	
 }
 
 

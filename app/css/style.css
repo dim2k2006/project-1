@@ -60,7 +60,7 @@ h6 {
 /*HEADER*/
 .header {
 	position: relative;
-	max-width: 960px;
+	max-width: 990px;
 	height: 100px;
 	margin: 0 auto;
 	background-color: #EEF5FD;
@@ -83,10 +83,11 @@ h6 {
 
 .table-header__content {
 	position: relative;
-	max-width: 960px;
+	max-width: 990px;
 	height: 80px;
 	margin: 0 auto;
-	background-color: blue;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
 }
 
 
