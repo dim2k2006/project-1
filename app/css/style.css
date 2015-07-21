@@ -17,7 +17,7 @@ html {
 /*BODY*/
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: #F5F9FC;
+	background-color: #ebf4f8;
 	background-repeat: no-repeat;
 	background-position: 50% 0;
 	background-image: url(../images/bg.jpg);
@@ -63,6 +63,7 @@ h6 {
 	max-width: 960px;
 	height: 100px;
 	margin: 0 auto;
+	background-color: #EEF5FD;
 	background-position: 50% 0;
 	background-repeat: no-repeat;
 	background-image: url(../images/bg.jpg);
@@ -125,6 +126,54 @@ h6 {
 	color: #444444;
 	text-align: center;
 }
+
+
+
+
+.chart__type {
+	width: 7.08%;
+}
+
+.chart__number {
+	width: 6.45%;
+}
+
+.chart__airline {
+	width: 17.5%;
+}
+
+.chart__aircraft {
+	width: 16.04%;
+}
+
+.chart__airport {
+	width: 15.52%;
+}
+
+.chart__time {
+	width: 11.77%;
+}
+
+.chart__status {
+	width: 16.45%;
+}
+
+.chart__note {
+	width: 9.16%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .chart__container {
 	position: relative;
@@ -251,23 +300,25 @@ td:hover::before {
 	background-position: -27px 0;
 }
 
-#departure:checked + .chart__label_departure {
+#departure:checked ~ .chart__label_departure {
 	background-position: 0 -27px;
 }
 
-#arrival:checked + .chart__label_arrival {
+#arrival:checked ~ .chart__label_arrival {
 	background-position: -28px -27px;
 }
 
 .chart__label_departure_fix {
 	position: fixed;
-	top: 0;
+	top: 23px;
+	margin-left: -26px;
 	z-index: 4;
 }
 
 .chart__label_arrival_fix {
 	position: fixed;
-	top: 0;
+	top: 23px;
+	margin-left: -27px;
 	z-index: 4;
 }
 
@@ -315,11 +366,6 @@ td:hover::before {
 
 
 
-
-
-/*#departure:checked ~ #arrival:checked ~ div .chart__row:hover {
-	background: rgba(141, 151, 178, .7);
-}*/
 
 
 
